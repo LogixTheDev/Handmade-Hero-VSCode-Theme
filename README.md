@@ -3,6 +3,10 @@
 A theme for Visual Studio Code, based around the Handmade Hero series by Casey Muratori.
 This is a simple settings.json file to be created as `.vscode/settings.json` in your projects.
 
+# Preview
+![● win32_handmade cpp - handmade-hero - Visual Studio Code 17_10_2024 00_06_38](https://github.com/user-attachments/assets/3553716a-ddf8-4fab-ad70-2237f7ddfc86)
+<em>Note: I can't guarantee the colour accuracy of this screenshot, as Windows HDR is very very janky when it comes to screenshots, however I used Game Bar to capture it, which [apparently](https://www.reddit.com/r/OLED_Gaming/comments/yrw3s2/comment/ivwlf3v/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) works best, and I can confirm that on my monitor the screenshot displays exactly the same colours as in VSC.</em>
+
 ## Fonts
 By default, I have the font set to [Fira Code](https://github.com/tonsky/FiraCode). However, in his tutorials, Casey uses [Liberation Mono](https://www.fontsquirrel.com/fonts/liberation-mono). Feel free to choose, or use your own. Either way, you will need to install your chosen font on your system.
 
@@ -29,9 +33,6 @@ If you'd like to:
 - Modify the theme to look nicer? Go for it! But please (optionally) share your changes with me, and let me know if I have your permission to update this repo with your changes if I like them.
 - Adapt the theme to support other languages? That would be very beneficial.
 - Make a theme extension from this? Please add support for other languages first, but then I have no objections.
-
-# Preview
-![image](https://github.com/user-attachments/assets/755b9737-a4d7-477b-8735-1dea2963953c)
 
 # Extensions
 This settings file contains definitions for the following extensions. They are optional, but recommended.
