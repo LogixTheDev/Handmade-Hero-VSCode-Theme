@@ -31,7 +31,11 @@ If you'd like to:
 - Make a theme extension from this? Please add support for other languages first, but then I have no objections.
 
 # Preview
-![image](https://github.com/user-attachments/assets/b1204ed6-1aad-46a9-bcb4-2d4eb12a7a5f)
+![image](https://github.com/user-attachments/assets/755b9737-a4d7-477b-8735-1dea2963953c)
 
 # Extensions
-This settings file contains definitions for the [Todo-Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) extension. I recommend you install it for todo and note highlighting.
+This settings file contains definitions for the following extensions. They are optional, but recommended.
+- [Todo-Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) by Gruntfuggly
+- [Bracket Lens](https://marketplace.visualstudio.com/items?itemName=wraith13.bracket-lens) by wraith13
+- [Highlight Logical Line](https://marketplace.visualstudio.com/items?itemName=usernamehw.highlight-logical-line) by Alexander
+- [Indented Block Highlighting](https://marketplace.visualstudio.com/items?itemName=byi8220.indented-block-highlighting) by byi8220
