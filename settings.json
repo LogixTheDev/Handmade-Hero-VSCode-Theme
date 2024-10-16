@@ -239,12 +239,6 @@
                     "foreground": "#FF0000", // Make this red because the ~ONLY~ time static should be used is when #defining it under different aliases
                 }
             },
-            {
-                "scope": "LPSTR",
-                "settings": {
-                    "foreground": "#FF0000"
-                }
-            }
         ]
     },
 
