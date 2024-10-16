@@ -44,6 +44,23 @@
         ".2"
     ],
 
+    "bracketLens.color": "#deb8872f",
+    "bracketLens.line": "none",
+    "bracketLens.mode": "auto",
+    "bracketLens.languageConfiguration": {
+        "ignoreCase": false,
+        "brackets": {
+            "symbol": [
+                {
+                    "opening": "{",
+                    "closing": "}",
+                    "headerMode": "smart",
+                    "inters": []
+                }
+            ],
+        },
+    },
+
     "workbench.colorCustomizations": {
         "focusBorder": "#00000000",
         "panel.border": "#00000000",  
