@@ -1,6 +1,6 @@
 {
     "editor.fontFamily": "Fira Code",
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     "editor.guides.indentation": false,
     "editor.cursorStyle": "block",
     "editor.cursorSmoothCaretAnimation": "on",
@@ -63,8 +63,12 @@
         "activityBar.inactiveForeground": "#755931",
         "activityBar.activeBorder": "#AF4600",
 
-        "tab.activeBackground": "#090909",
-        "tab.activeForeground": "#DEB887", 
+        "tab.inactiveBackground": "#090909",
+        "tab.inactiveForeground": "#755931",
+        "tab.activeBackground": "#0c0b5d",
+        "tab.activeForeground": "#8180e9", 
+        "tab.hoverBackground": "#0c0b5d73",
+        "tab.hoverForeground": "#DEB887",
         "editorGroupHeader.tabsBackground": "#090909",
 
         "breadcrumb.background": "#090909",
@@ -82,11 +86,21 @@
         // Misc
         "icon.foreground": "#DEB887",
         "sideBarTitle.foreground": "#DEB887",
+
+        // Warnings
+        "editorWarning.foreground": "#FF8000",
+        "editorWarning.background": "#FF800080",
+        "list.warningForeground": "#FF8000",
+
+        // Errors
+        "editorError.foreground": "#FF0000",
+        "editorError.background": "#FF000080",
+        "list.errorForeground": "#FF0000",
     },
     "editor.semanticHighlighting.enabled": true,
     "editor.semanticTokenColorCustomizations": {
         "rules": {
-            "type": "#A07500",
+            "type": "#B78611", // "#A07500",
             "parameter": "#DEB887",
             "bracket": "#FF00FF",
             "parenthesis": "#FF00FF",
@@ -126,7 +140,7 @@
             {
                 "scope": "storage.type.built-in.primitive",
                 "settings": {
-                    "foreground": "#A07500",
+                    "foreground": "#B78611",
                     "fontStyle": ""
                 }
             },
@@ -175,7 +189,7 @@
             {
                 "scope": "keyword.control.return.cpp",
                 "settings": {
-                    "foreground": "#A07500",
+                    "foreground": "#B78611",
                     "fontStyle": ""
                 }
             },
@@ -194,7 +208,7 @@
             {
                 "scope": "keyword.control",
                 "settings": {
-                    "foreground": "#a07500",
+                    "foreground": "#B78611",
                 }
             },
             {
@@ -230,13 +244,25 @@
             {
                 "scope": "variable.parameter",
                 "settings": {
-                    "foreground": "#D6DEE6",
+                    "foreground": "#DEB88780", // Macro parameter declaration
+                }
+            },
+            {
+                "scope": "meta.preprocessor.macro.cpp",
+                "settings": {
+                    "foreground": "#DEB88780", // Macro parameter usage
                 }
             },
             {
                 "scope": "storage.modifier.specifier.static.cpp",
                 "settings": {
                     "foreground": "#FF0000", // Make this red because the ~ONLY~ time static should be used is when #defining it under different aliases
+                }
+            },
+            {
+                "scope": "storage.modifier.specifier.const.cpp",
+                "settings": {
+                    "foreground": "#B78611",
                 }
             },
         ]
