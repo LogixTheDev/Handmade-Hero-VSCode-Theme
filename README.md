@@ -40,5 +40,5 @@ If you'd like to:
 This settings file contains definitions for the following extensions. They are optional, but recommended.
 - [Todo-Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree) by Gruntfuggly
 - [Bracket Lens](https://marketplace.visualstudio.com/items?itemName=wraith13.bracket-lens) by wraith13
-- [Highlight Logical Line](https://marketplace.visualstudio.com/items?itemName=usernamehw.highlight-logical-line) by Alexander
+- [Custom Line Highlight](https://marketplace.visualstudio.com/items?itemName=Logix.custom-line-highlight) by... well, by me!
 - [Indented Block Highlighting](https://marketplace.visualstudio.com/items?itemName=byi8220.indented-block-highlighting) by byi8220
