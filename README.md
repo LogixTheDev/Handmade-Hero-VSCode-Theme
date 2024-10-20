@@ -2,7 +2,7 @@
 
 ## v2.0 (W.I.P)
 
-A theme for Visual Studio Code, based around the Handmade Hero series by Casey Muratori.
+A theme for Visual Studio Code, based around the [Handmade Hero](https://www.youtube.com/watch?v=l05e2eBPREI) series by Casey Muratori.
 This is a simple settings.json file to be created as `.vscode/settings.json` in your projects.
 
 This theme was built on top of the [Spacebox (Pulsar)](https://marketplace.visualstudio.com/items?itemName=SpaceBox.spacebox-theme) theme. I don't know if it's relevant, but I also have [Spacebox UI Enhancer](https://marketplace.visualstudio.com/items?itemName=SpaceBox.spacebox-ui) installed.
