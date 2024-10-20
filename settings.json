@@ -12,23 +12,32 @@
         "xlocale": "cpp"
     },
 
-    // Editor Preferences - Feel Free to Customize These
-    "editor.fontFamily": "Fira Code",
-    "editor.fontSize": 16,
-    "editor.guides.indentation": false,
-    "editor.cursorStyle": "block",
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.bracketPairColorization.enabled": false,
-    "editor.matchBrackets": "never", // Disables rainbow brace pairs to allow the theme to colour them
-    "editor.renderFinalNewline": "dimmed",
-    "editor.renderLineHighlight": "gutter", // Change to "line" for default line highlight
+    // Editor Preferences
+    "editor.fontFamily": "Fira Code",                               // Use the Fira Code font (the best programming font)
+    "editor.fontSize": 16,                                          // Font size (duh!)
+    "editor.fontLigatures": true,                                   // Enable font ligatures (Fira Code has these)
+    "editor.guides.indentation": false,                             // Disables indent guides in the editor (anti-clutter)
+    "editor.bracketPairColorization.enabled": false,                // Disables rainbow brackets (needed for the theme to work properly)
+    "editor.matchBrackets": "never",                                // Disables brace highlighting (anti-clutter)
+    "editor.renderFinalNewline": "dimmed",                          // Renders the line number for the final line
+    "editor.renderLineHighlight": "gutter",                         // Change to "line" for default line highlight
+    "editor.cursorStyle": "block",                                  // Sets the caret style
+    "editor.cursorSmoothCaretAnimation": "on",                      // Determines whether the caret should move smoothly
+    "editor.roundedSelection": false,                               // Removes rounding from text selection highlight
+    "editor.renderWhitespace": "none",                              // Removes whitespace rendering (anti-clutter)
+    "breadcrumbs.enabled": false,                                   // Removes breadcrumbs (anti-clutter) - these are redundant with the new 'sticky scroll' feature
 
-    // Outline View - Things To Show
+    "debug.console.collapseIdenticalLines": false,                  // Disable grouping of similar messages in the Debug Console (for ease of reading)
+
+    "autoHide.autoHideRightSideBar": false,
+    "autoHide.autoHideLeftSideBar": false,
+
+    // Outline View - Toggles
+    // NOTE: I've filtered for the few things I care about seeing in the Outline, for following Handmade Hero. You may want to customize this!
     "outline.showEnums": true,
     "outline.showFunctions": true,
     "outline.showMethods": true,
     "outline.showStructs": true,
-    // Outline View - Things To Hide
     "outline.showArrays": false,
     "outline.showBooleans": false,
     "outline.showClasses": false,
@@ -53,18 +62,21 @@
     "outline.showVariables": false,
 
     // Preferences For The 'Indented Block Highlighting' Extension
+    // 19, 19, 19 = dark grey (matches with the background colour)
+    // 12, 11, 93 = dark blue (matches with the line highlight colour)
     "blockhighlight.background":
     [
         "12",
         "11",
         "93",
-        ".2"
+        ".0"
     ],
 
     // Preferences For The 'Bracket Lens' Extension
-    "bracketLens.color": "#deb8872f",
+    "bracketLens.color": "#A085631A",
     "bracketLens.line": "none",
     "bracketLens.mode": "auto",
+    "bracketLens.prefix": " <- ",
     "bracketLens.languageConfiguration":
     {
         "ignoreCase": false,
@@ -78,10 +90,21 @@
                     "closing": "}",
                     "headerMode": "smart",
                     "inters": []
-                }
+                },
+                {
+                    "opening": "#pragma region",
+                    "closing": "#pragma endregion",
+                    "headerMode": "smart",
+                    "inters": []
+                },
             ],
         },
     },
+    
+    // Preferences For My 'Custom Line Highlight' Extension
+    "customLineHighlight.lineHighlightColourActive": "#101010",
+    "customLineHighlight.lineHighlightColourInactive": "#1010107A",
+    "customLineHighlight.borderHeight": "1.4em",
 
     // Preferences For The 'Todo-Tree' Extension
     "todo-tree.general.tags":
@@ -94,144 +117,50 @@
         "TODO":
         {
             "icon": "checklist",
-            "foreground": "#ff0000",
-            "background": "#ff000027",
-            "iconColour": "#ff0000",
+            "foreground": "#BE2A28",
+            "iconColour": "#BE2A28",
             "borderRadius": "0",
-            "type": "text",
-            "textDecoration": "underline"
+            "type": "tag",
         },
         "NOTE":
         {
             "icon": "note",
-            "foreground": "#00ff00",
-            "background": "#00ff0027",
-            "iconColour": "#00ff00",
+            "foreground": "#4BBE28",
+            "iconColour": "#4BBE28",
             "borderRadius": "0",
-            "type": "text",
-            "textDecoration": "underline"
+            "type": "tag",
         },
     },
+    "todo-tree.tree.scanMode": "current file",
 
-    // MAIN THEME:
-    "workbench.colorCustomizations":
-    {
-        "focusBorder": "#00000000",
-        "panel.border": "#00000000",  
-        
-        "titleBar.activeBackground": "#090909",
-        "titleBar.inactiveBackground": "#161618",
-        "titleBar.border": "#090909",
-        "titleBar.activeForeground": "#DEB887",
-        "titleBar.inactiveForeground": "#755931",
-
-        "editor.background": "#090909",
-        "editor.findMatchBackground": "#B700FFA6",
-        "editor.findMatchForeground": "#FFFFFFA6",
-        "editor.findMatchHighlightBackground": "#B700FFA6",
-        "editor.findMatchHighlightForeground": "#FFFFFFA6",
-        "editor.wordHighlightBackground": "#00000000",
-        "editor.selectionBackground": "#0c0b5d7c",
-
-        "editor.lineHighlightBackground": "#0c0b5d",
-        "highlightLogicalLine.background": "#0c0b5da8",
-        "editorCursor.foreground": "#36f742",
-
-        "editorHoverWidget.background": "#040430",
-        "editorHoverWidget.border": "#040468",
-        "editorHoverWidget.foreground": "#DEB887",
-
-        "editorSuggestWidget.background": "#040430",
-        "editorSuggestWidget.border": "#040468",
-        "editorSuggestWidget.selectedBackground": "#0c0b5d",
-        "editorSuggestWidget.foreground": "#755931",
-        "editorSuggestWidget.highlightForeground": "#36f742",
-        "editorSuggestWidget.selectedIconForeground": "#36f742",
-
-        "list.hoverForeground": "#DEB887",
-        "list.activeSelectionBackground": "#0c0b5d",
-        "list.inactiveSelectionBackground": "#0c0b5daf",
-        "list.activeSelectionForeground": "#DEB887",
-        "list.highlightForeground": "#daffdd",
-        "list.hoverBackground": "#0c0b5d",
-
-        "tree.indentGuidesStroke": "#DEB887",
-        "tree.inactiveIndentGuidesStroke": "#755931",
-
-        "editorLineNumber.activeForeground": "#DEB887",
-        "editorLineNumber.dimmedForeground": "#1d1a168c",
-        "editorLineNumber.foreground": "#24201b",
-
-        "sideBar.border": "#00000000",
-        "sideBar.background": "#090909",
-        "sideBar.foreground": "#755931",
-
-        "activityBar.border": "#00000000",
-        "activityBar.background": "#090909",
-        "activityBar.foreground": "#DEB887",
-        "activityBar.inactiveForeground": "#755931",
-        "activityBar.activeBorder": "#AF4600",
-        "activityBarBadge.background": "#FF8000",
-        "activityBarBadge.foreground": "#090909",
-
-        "tab.inactiveBackground": "#090909",
-        "tab.inactiveForeground": "#755931",
-        "tab.activeBackground": "#0c0b5d",
-        "tab.activeForeground": "#8180e9", 
-        "tab.hoverBackground": "#0c0b5d73",
-        "tab.hoverForeground": "#DEB887",
-        "editorGroupHeader.tabsBackground": "#090909",
-
-        "breadcrumb.background": "#090909",
-        "breadcrumb.activeSelectionForeground": "#DEB887",
-        "breadcrumb.foreground": "#755931",
-        "breadcrumb.focusForeground": "#DEB887",
-
-        "menu.background": "#090909",
-        "menu.border": "#AF4600",
-        "menu.selectionBackground": "#0c0b5d",
-        "menu.foreground": "#755931",
-        "menu.selectionForeground": "#DEB887",
-        "menu.separatorBackground": "#AF4600",
-
-        // Misc
-        "icon.foreground": "#DEB887",
-        "sideBarTitle.foreground": "#DEB887",
-
-        // Warnings
-        "editorWarning.foreground": "#FF8000",
-        "editorWarning.background": "#FF800080",
-        "list.warningForeground": "#FF8000",
-
-        // Errors
-        "editorError.foreground": "#FF0000",
-        "editorError.background": "#FF000080",
-        "list.errorForeground": "#FF0000",
-
-        // Git
-        "gitDecoration.ignoredResourceForeground": "#7D7D7D",
-        "gitDecoration.addedResourceForeground": "#6B8E23",
-        "gitDecoration.deletedResourceForeground": "#FF0000",
-
-        "editorGutter.addedBackground": "#6B8E23",
-        "editorGutter.modifiedBackground": "#0c0b5d",
-        "editorGutter.deletedBackground": "#FF0000",
-    },
-    // MAIN THEME (Continuation) - Basic Highlighting
+    //
+    // MAIN THEME
+    //
     "editor.semanticHighlighting.enabled": true,
     "editor.semanticTokenColorCustomizations":
     {
-        "rules": {
-            "type": "#B78611",
-            "parameter": "#DEB887",
-            "bracket": "#DEB887",
-            "parenthesis": "#DEB887",
-            "curlybrace": "#DEB887",
-            "macro": "#CC8E37",
-            "variable": "#DEB887",
+        "rules":
+        {
+            "type":             { "foreground": "#D8A51D", },
+            "bracket":          { "foreground": "#A08563", },
+            "parenthesis":      { "foreground": "#A08563", },
+            "curlybrace":       { "foreground": "#A08563", },
+            "macro":            { "foreground": "#4D837C", },
+            "function":         { "foreground": "#CC5735", },
+            "numberLiteral":    { "foreground": "#6B8E23", },
+            "stringLiteral":    { "foreground": "#6B8E23", },
+            "customLiteral":    { "foreground": "#6B8E23", },
+            "constant":         { "foreground": "#6B8E23", },
+            "preprocessorText": { "foreground": "#DAB98F", },
+            "variable":         { "foreground": "#A08563", },
+            "parameter":        { "foreground": "#A08563", "fontStyle": "italic", },
+            "property":         { "foreground": "#A08563", "fontStyle": "italic", },
+            "enumMember":       { "foreground": "#4D837C", },
+            "comment":          { "foreground": "#686868", },
+            // Make globals bold
+            "*.global":         { "foreground": "#A08563", "fontStyle": "bold" },
         },
     },
-    // MAIN THEME (Continuation) - Granular Highlighting - Supports: C++ (W.I.P), JSON (W.I.P)
     "editor.tokenColorCustomizations":
     {
         "textMateRules":
@@ -239,239 +168,184 @@
             // --------------------------------------------------------------------------------------------------
             // C++ (W.I.P)
             // --------------------------------------------------------------------------------------------------
-            {
-                "scope": "variable.other.property.cpp",
-                "settings": { "foreground": "#DEB88780", "fontStyle": "italic" }
-            },
-            {
-                "scope": "entity.name.function.cpp",
-                "settings": { "foreground": "#AF4600", }
-            },
-            {
-                "scope": "storage.type",
-                "settings": { "foreground": "#AF4600", "fontStyle": "italic" }
-            },
-            {
-                "scope": "entity.name.type.struct.cpp",
-                "settings": { "foreground": "#AF4600", "fontStyle": "bold" }
-            },
-            {
-                "scope": "keyword.control.return.cpp",
-                "settings": { "foreground": "#6B8E23", }
-            },
-            {
-                "scope": "entity.name.function",
-                "settings": { "foreground": "#CDAA7D" }
-            },
-            {
-                "scope": "storage.type.built-in.primitive",
-                "settings": { "foreground": "#B78611", }
-            },
-            {
-                "scope": "comment.line",
-                "settings": { "foreground": "#7D7D7D", }
-            },
-            {
-                "scope": "comment.block",
-                "settings": { "foreground": "#7D7D7D", }
-            },
-            {
-                "scope": "comment.line.double-slash.documentation.cpp",
-                "settings": { "foreground": "#7D7D7D", }
-            },
-            {
-                "scope": "storage.type.class.doxygen.cpp",
-                "settings": { "foreground": "#bdb0a5", }
-            },
-            {
-                "scope": "string.quoted.single",
-                "settings": { "foreground": "#6B8E23", }
-            },
-            {
-                "scope": "string.quoted.double",
-                "settings": { "foreground": "#6B8E23", }
-            },
-            {
-                "scope": "string.quoted.triple",
-                "settings": { "foreground": "#6B8E23", }
-            },
-            {
-                "scope": "string.quoted.other",
-                "settings": { "foreground": "#6B8E23", }
-            },
-            {
-                "scope": "constant",
-                "settings": { "foreground": "#6B8E23", }
-            },
-            {
-                "scope": "constant.numeric",
-                "settings": { "foreground": "#6B8E23", }
-            },
-            {
-                "scope": "keyword.control.return.cpp",
-                "settings": { "foreground": "#B78611", }
-            },
-            {
-                "scope": "punctuation.separator",
-                "settings": { "foreground": "#DEB887", }
-            },
-            {
-                "scope": "keyword.operator",
-                "settings": { "foreground": "#DEB887", }
-            },
-            {
-                "scope": "keyword.control",
-                "settings": { "foreground": "#B78611", }
-            },
-            {
-                "scope": "keyword.operator.functionlike.cpp",
-                "settings": { "foreground": "#AF4600" }
-            },
-            {
-                "scope": "keyword.operator.sizeof.cpp",
-                "settings": { "foreground": "#AF4600" }
-            },
-            {
-                "scope": "keyword.other.typedef.cpp",
-                "settings": { "foreground": "#B78611" }
-            },
-            {
-                "scope": "meta.block",
-                "settings": { "foreground": "#DEB887", }
-            },
-            {
-                "scope": "punctuation",
-                "settings": { "foreground": "#DEB887", }
-            },
-            {
-                "scope": "punctuation.section.attribute.begin.cpp",
-                "settings": { "foreground": "#6b5e4c", }
-            },
-            {
-                "scope": "entity.other.attribute.maybe_unused.cpp",
-                "settings": { "foreground": "#6b5e4c", },
-            },
-            {
-                "scope": "punctuation.section.attribute.end.cpp",
-                "settings": { "foreground": "#6b5e4c", }
-            },
-            {
-                // 'static' modifier keyword
-                // We make this red because the ~ONLY~ time static should be used is when #defining it under different aliases
-                "scope": "storage.modifier.specifier.static.cpp",
-                "settings": { "foreground": "#FF0000", }
-            },
-            {
-                "scope": "storage.modifier.specifier.const.cpp",
-                "settings": { "foreground": "#B78611", }
-            },
-            //
+            { "scope": "storage.type",                                                          "settings": { "foreground": "#D8A51D", }, },
+            { "scope": "storage.modifier.specifier.const.cpp",                                  "settings": { "foreground": "#D8A51D", }, },
+            // Keywords
+            { "scope": "keyword.control",                                                       "settings": { "foreground": "#DAB98F", }, },
+            { "scope": "keyword.other.typedef.cpp",                                             "settings": { "foreground": "#CC5735", } },
+            // Functions
+            { "scope": "entity.name.function.call.cpp",                                         "settings": { "foreground": "#CC5735", } },
+            { "scope": "entity.name.function.member.cpp",                                       "settings": { "foreground": "#CC5735", } },
+            { "scope": "keyword.operator.functionlike.cpp",                                     "settings": { "foreground": "#CC5735", } },
+            { "scope": "keyword.operator.sizeof.cpp",                                           "settings": { "foreground": "#CC5735", } },
+            // Strings
+            { "scope": "string.quoted.double.cpp",                                              "settings": { "foreground": "#6B8E23", } },
+            { "scope": "string constant.other.placeholder",                                     "settings": { "foreground": "#B2DD5B", } },
+            { "scope": "constant.character.escape.cpp",                                         "settings": { "foreground": "#B2DD5B", } },
+            // Preprocessor
+            { "scope": "keyword.control.directive.include.cpp",                                 "settings": { "foreground": "#DAB98F", }, },
+            { "scope": "keyword.control.directive.define.cpp",                                  "settings": { "foreground": "#DAB98F", }, },
+            { "scope": "keyword.control.directive.pragma.cpp",                                  "settings": { "foreground": "#DAB98F", }, },
+            { "scope": "entity.other.attribute-name.pragma.preprocessor.cpp",                   "settings": { "foreground": "#4D837C", }, },
+            { "scope": "variable.parameter.preprocessor.cpp",                                   "settings": { "foreground": "#DAB98F", }, },
+            { "scope": "meta.preprocessor.macro.cpp",                                           "settings": { "foreground": "#DAB98F", }, },
+            { "scope": "meta.preprocessor.pragma.cpp",                                          "settings": { "foreground": "#DAB98F", }, },
+            // Punctuation
+            { "scope": "punctuation.section.parens.begin.bracket.round.cpp",                    "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.parens.end.bracket.round.cpp",                      "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.arguments.begin.bracket.round.function.call.cpp",   "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.arguments.end.bracket.round.function.call.cpp",     "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.block.begin.bracket.curly.cpp",                     "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.block.end.bracket.curly.cpp",                       "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.arguments.begin.bracket.round.operator.sizeof.cpp", "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.arguments.end.bracket.round.operator.sizeof.cpp",   "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.arguments.begin.bracket.round.function.member.cpp", "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.arguments.end.bracket.round.function.member.cpp",   "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.block.begin.bracket.curly.switch.cpp",              "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.block.end.bracket.curly.switch.cpp",                "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.parens.begin.bracket.round.conditional.switch.cpp", "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.parens.end.bracket.round.conditional.switch.cpp",   "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.parameters.begin.bracket.round.cpp",                "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.parameters.end.bracket.round.cpp",                  "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.block.begin.bracket.curly.function.definition.cpp", "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.section.block.end.bracket.curly.function.definition.cpp",   "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.definition.begin.bracket.square",                           "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.definition.end.bracket.square",                             "settings": { "foreground": "#A08563", }, },
+            { "scope": "meta.block.struct.cpp",                                                 "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.terminator.statement.cpp",                                  "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.separator.delimiter.comma.cpp",                             "settings": { "foreground": "#A08563", }, },
             // Operators
-            //
-            {
-                "scope": "keyword.operator.assignment.cpp",
-                "settings": { "foreground": "#d97a73", }
-            },
-            {
-                "scope": "keyword.operator.comparison.cpp",
-                "settings": { "foreground": "#d97a73", }
-            },
-            {
-                "scope": "punctuation.separator.pointer-access.cpp", // '->'
-                "settings": { "foreground": "#d97a73", }
-            },
-            {
-                "scope": "keyword.operator.arithmetic.cpp", // '+', '-', '*', '/', etc
-                "settings": { "foreground": "#d97a73", }
-            },
-            {
-                "scope": "keyword.operator.bitwise", // '&', '|', etc
-                "settings": { "foreground": "#d97a73", }
-            },
-            {
-                // Increment operator -> ++
-                "scope": "keyword.operator.increment.cpp",
-                "settings": { "foreground": "#d97a73", }
-            },
-            {
-                // Decrement operator -> --
-                "scope": "keyword.operator.decrement.cpp",
-                "settings": { "foreground": "#d97a73", }
-            },
-            //
-            // Control Directives
-            //
-            {
-                "scope": "punctuation.definition.directive.cpp",
-                "settings": { "foreground": "#E4C49B", "fontStyle": "italic" }
-            },
-            {
-                // #include
-                "scope": "keyword.control.directive.include.cpp",
-                "settings": { "foreground": "#E4C49B", "fontStyle": "italic" }
-            },
-            {
-                // #pragma
-                "scope": "keyword.control.directive.pragma.cpp",
-                "settings": { "foreground": "#E4C49B", "fontStyle": "italic" }
-            },
-            {
-                // #define
-                "scope": "keyword.control.directive.define.cpp",
-                "settings": { "foreground": "#E4C49B", "fontStyle": "italic" }
-            },
-            {
-                // warning, push, pop, (etc)
-                "scope": "entity.other.attribute-name.pragma.preprocessor.cpp",
-                "settings": { "foreground": "#E4C49B", "fontStyle": "italic" }
-            },
-            {
-                // preprocessor parentheses; numbers; other values
-                "scope": "meta.preprocessor.pragma.cpp",
-                "settings": { "foreground": "#DEB887", "fontStyle": "italic" }
-            },
-            {
-                // Left angle brackets in #includes
-                "scope": "punctuation.definition.string.begin.cpp",
-                "settings": { "foreground": "#DEB887", }
-            },
-            {
-                // Right angle brackets in #includes
-                "scope": "punctuation.definition.string.end.cpp",
-                "settings": { "foreground": "#DEB887", }
-            },
-            {
-                // Macro parameter declaration
-                "scope": "variable.parameter",
-                "settings": { "foreground": "#DEB88780", }
-            },
-            {
-                // Macro parameter usage
-                "scope": "meta.preprocessor.macro.cpp",
-                "settings": { "foreground": "#DEB88780", }
-            },
-
-            // --------------------------------------------------------------------------------------------------
-            // JSON (W.I.P)
-            // --------------------------------------------------------------------------------------------------
-            {
-                "scope": "support.type.property-name.json.comments",
-                "settings": {
-                    "foreground": "#6B8E23",
-                }
-            },
-            {
-                "scope": "punctuation.definition.dictionary.begin.json.comments",
-                "settings": {
-                    "foreground": "#DEB887",
-                }
-            },
-            {
-                "scope": "punctuation.definition.dictionary.end.json.comments",
-                "settings": {
-                    "foreground": "#DEB887",
-                }
-            }
+            { "scope": "keyword.operator.comparison.cpp",                                       "settings": { "foreground": "#A08563", }, },
+            { "scope": "keyword.operator.arithmetic.cpp",                                       "settings": { "foreground": "#A08563", }, },
+            { "scope": "keyword.operator.assignment.cpp",                                       "settings": { "foreground": "#A08563", }, },
+            { "scope": "keyword.operator.assignment.compound.cpp",                              "settings": { "foreground": "#A08563", }, },
+            { "scope": "keyword.operator.logical.cpp",                                          "settings": { "foreground": "#A08563", }, },
+            { "scope": "keyword.operator.bitwise.cpp",                                          "settings": { "foreground": "#A08563", }, },
+            { "scope": "keyword.operator.bitwise.shift.cpp",                                    "settings": { "foreground": "#A08563", }, },
+            { "scope": "keyword.operator.increment.cpp",                                        "settings": { "foreground": "#A08563", }, },
+            { "scope": "keyword.operator.decrement.cpp",                                        "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.separator.dot-access.cpp",                                  "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.separator.pointer-access.cpp",                              "settings": { "foreground": "#A08563", }, },
+            { "scope": "storage.modifier.pointer.cpp",                                          "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.separator.colon.case.cpp",                                  "settings": { "foreground": "#A08563", }, },
+            { "scope": "punctuation.separator.colon.case.default.cpp",                          "settings": { "foreground": "#A08563", }, },
+            // Comments
+            { "scope": "comment.line.double-slash.cpp",                                         "settings": { "foreground": "#686868", "fontStyle": "" }, },
+            { "scope": "comment.block.cpp",                                                     "settings": { "foreground": "#686868", "fontStyle": "" }, },
+            { "scope": "punctuation.definition.comment.begin.cpp",                              "settings": { "foreground": "#686868", "fontStyle": "" }, },
+            { "scope": "punctuation.definition.comment.end.cpp",                                "settings": { "foreground": "#686868", "fontStyle": "" }, },
+            { "scope": "punctuation.definition.comment.documentation.cpp",                      "settings": { "foreground": "#686868", "fontStyle": "" }, },
+            { "scope": "storage.type.class.doxygen.cpp",                                        "settings": { "foreground": "#a0a0a0", "fontStyle": "" }, },
+            // Constants
+            { "scope": "constant.numeric.decimal.cpp",                                          "settings": { "foreground": "#6B8E23", "fontStyle": "" }, },
+            // Special
+            { "scope": "storage.modifier.specifier.static.cpp",                                 "settings": { "foreground": "#BE2A28", "fontStyle": "strikethrough" }, },
         ]
+    },
+    "workbench.colorCustomizations":
+    {
+        "errorLens.errorBackground":                    "#451610FF",
+
+        "focusBorder":                                  "#00000000",
+        "panel.border":                                 "#00000000",  
+        
+        "titleBar.activeBackground":                    "#232323FF",
+        "titleBar.inactiveBackground":                  "#121212FF",
+        "titleBar.border":                              "#232323FF",
+        "titleBar.activeForeground":                    "#A08563FF",
+        "titleBar.inactiveForeground":                  "#755931FF",
+
+        "editor.background":                            "#232323FF", // The main editor background
+        "editor.findMatchBackground":                   "#3C769CA6", // [UNKNOWN]
+        "editor.findMatchForeground":                   "#FFFFFFA6",
+        "editor.findMatchHighlightBackground":          "#3C769CA6", // Find & Replace matches
+        "editor.findMatchHighlightForeground":          "#FFFFFFA6",
+        "editor.wordHighlightBackground":               "#315268A6", // Occurences highlight
+        "editor.selectionBackground":                   "#315268A6", // Selection highlight
+
+        "editor.lineHighlightBackground":               "#F24C4B7A", // Colour of the current line highlight (in the gutter)
+        "editorCursor.foreground":                      "#F24C4BFF", // Colour of the caret
+        "editorCursor.background":                      "#FFFFFFFF", // Colour of text where the caret is
+
+        "editorHoverWidget.background":                 "#1B1B1BFF", // Styling for the hover widget (shows when you hover the cursor over a piece of code)
+        "editorHoverWidget.border":                     "#F24C4B7A",
+        "editorHoverWidget.foreground":                 "#A08563FF",
+
+        "editorSuggestWidget.background":               "#1B1B1BFF", // Styling for the suggestions widget (the auto-complete popup that shows when typing (some people refer to it as IntelliSense))
+        "editorSuggestWidget.border":                   "#F24C4B7A",
+        "editorSuggestWidget.selectedBackground":       "#315268A6",
+        "editorSuggestWidget.foreground":               "#A08563FF",
+        "editorSuggestWidget.highlightForeground":      "#6B8E23FF",
+        "editorSuggestWidget.selectedIconForeground":   "#6B8E23FF",
+
+        "list.hoverForeground":                         "#A08563FF", // Styling for lists - affects the Explorer view
+        "list.hoverBackground":                         "#4E7B99A6",
+        "list.activeSelectionBackground":               "#315268A6",
+        "list.inactiveSelectionBackground":             "#232323FF",
+        "list.activeSelectionForeground":               "#8D8D8DFF",
+        "list.highlightForeground":                     "#DAFFDDFF",
+
+        "tree.indentGuidesStroke":                      "#A08563FF", // Styling for tree views - affects the Explorer view as well
+        "tree.inactiveIndentGuidesStroke":              "#755931FF",
+
+        "editorLineNumber.activeForeground":            "#A08563FF", // Line numbers in the editor
+        "editorLineNumber.dimmedForeground":            "#1D1A168C",
+        "editorLineNumber.foreground":                  "#24201BFF",
+
+        "sideBar.border":                               "#00000000", // Styling for the side bar (I don't really use this)
+        "sideBar.background":                           "#232323FF",
+        "sideBar.foreground":                           "#755931FF",
+
+        "activityBar.border":                           "#00000000", // Styling for the activity bar on the left
+        "activityBar.background":                       "#232323FF",
+        "activityBar.foreground":                       "#A08563FF",
+        "activityBar.inactiveForeground":               "#755931FF",
+        "activityBar.activeBorder":                     "#AF4600FF",
+        "activityBarBadge.background":                  "#FF8000FF",
+        "activityBarBadge.foreground":                  "#232323FF",
+
+        "tab.inactiveBackground":                       "#232323FF", // Styling for the tab row at the top of the editor
+        "tab.inactiveForeground":                       "#755931FF",
+        "tab.activeBackground":                         "#3F3F3FFF",
+        "tab.activeForeground":                         "#F24C4B7A", 
+        "tab.hoverBackground":                          "#4D837CFF",
+        "tab.hoverForeground":                          "#A08563FF",
+        "editorGroupHeader.tabsBackground":             "#232323FF",
+
+        "breadcrumb.background":                        "#232323FF", // Styling for the breadcrumb row under the tab row
+        "breadcrumb.activeSelectionForeground":         "#A08563FF",
+        "breadcrumb.foreground":                        "#755931FF",
+        "breadcrumb.focusForeground":                   "#A08563FF",
+
+        "menu.background":                              "#232323FF", // Menu styling (File, Edit, Selection, View etc)
+        "menu.foreground":                              "#A08563FF",
+        "menu.border":                                  "#F24C4B7A",
+        "menu.selectionBackground":                     "#315268A6",
+        "menu.selectionForeground":                     "#5f9bc4",
+        "menu.separatorBackground":                     "#F24C4B7A",
+
+        "scrollbarSlider.activeBackground":               "default",   
+
+        // Misc
+        "icon.foreground":                              "#A08563FF",
+        "sideBarTitle.foreground":                      "#A08563FF",
+
+        // Warnings
+        "editorWarning.foreground":                     "#FF8000FF", // Styling for warnings shown within the editor
+        "editorWarning.background":                     "#FF800080",
+        "list.warningForeground":                       "#FF8000FF",
+
+        // Errors
+        "editorError.foreground":                       "#FF0000FF", // Styling for errors shown within the editor
+        "editorError.background":                       "#FF000080",
+        "list.errorForeground":                         "#FF0000FF",
+
+        // Git
+        "gitDecoration.ignoredResourceForeground":      "#7D7D7DFF", // Styling for files in the Explorer when using a git repository
+        "gitDecoration.addedResourceForeground":        "#6B8E23FF",
+        "gitDecoration.deletedResourceForeground":      "#FF0000FF",
+        "editorGutter.addedBackground":                 "#6B8E23FF",
+        "editorGutter.modifiedBackground":              "#A085637A", //"#4D837C7A",
+        "editorGutter.deletedBackground":               "#FF0000FF",
     },
 }
